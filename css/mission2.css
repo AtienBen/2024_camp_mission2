@@ -1,0 +1,463 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* *{outline: 1px solid black;}   */
+
+.body{
+    font-family: "Noto Sans TC", sans-serif;
+    line-height: 1.5;
+    padding-top: 60px;
+}
+  
+/* 表頭區域 */
+.header {
+    background: #fff;
+    border-bottom: 1px solid #F1F1F1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 28px 0;
+  }
+.header-inner{
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.container {
+    max-width: 1296px;
+    margin: 0 auto;
+}
+@media(max-width:1295px){
+    .container{
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+}
+
+.logo {
+    margin-right: 318px;
+}
+
+.menu {
+    display: flex;
+    gap: 40px
+}
+  
+.menu .menu-list a{
+    color: #000;
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration: none;
+    padding: 4px 8px;
+    position: relative;
+}
+  
+  
+.menu .menu-list a::before {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+}
+  
+.menu .menu-list a::after {
+    top: 0;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
+}
+  
+.menu .menu-list a:hover::before,
+.menu .menu-list a:hover::after {
+    opacity: 1;
+}
+.menu-btn {
+    display: none;
+    cursor: pointer;
+}
+.menu-btn .menu-icon {
+    display: none;
+}
+.menu-control:checked + .menu-btn .open {
+    display: none;
+}
+.menu-control:checked + .menu-btn .close {
+    display: inline;
+}
+.menu-control:not(:checked) + .menu-btn .open {
+    display: inline;
+}
+.menu-control:not(:checked) + .menu-btn .close {
+    display: none;
+}
+.menu-control {
+    display: none;
+}
+
+/* 表頭區域RWD 992px */
+@media (max-width: 992px) {
+    .header-inner{
+        justify-content: space-between;
+    }
+    .logo {
+        margin-right: 0px;
+      }
+    .menu-btn{
+      display: block;
+    }
+    .menu {
+      display: none;
+    }
+   
+    .menu-control:checked ~ .menu {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+}
+
+/* 橫幅banner區域*/
+.title{
+    max-width: 670px;
+    margin: 0 auto;
+    padding: 80px 0px;
+}
+
+.banner{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 59px 0px;
+    row-gap: 16px;
+}
+
+.banner h2{
+    font-size: 24px;
+    color: #1E1E1E;
+    text-align: center;
+}
+
+.slogan{
+    max-width: 636px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.slogan-item{
+    max-width: 298px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slogan-item h3{
+    font-size: 16px;
+    font-weight: 400;
+    color: #5B5B5B;
+    margin-bottom: 8px;
+}
+
+.slogan-item p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #3B3B3B;
+    text-align: center;
+}
+
+/* 橫幅banner區域RWD 992px*/
+@media (max-width: 992px) {
+    .title{
+        width: 300px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin: 0 auto;
+    }
+    .title h2{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .slogan{
+        width: 235px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+
+
+/* 主要內容區域*/
+.content{
+    max-width: 1296px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 120px 0px;
+    justify-content: space-between;
+}
+
+.item{
+    margin-bottom: 80px;
+    width: 49%;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+.item img{
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.item h3{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #3B3B3B
+}
+
+.item p{
+    font-size: 16px;
+    font-weight: 400px;
+    margin-bottom: 24px;
+    color: #919191;
+}
+
+.item ul{
+    display: flex;
+}
+
+.item li{
+    border-radius: 16px;
+    background: #F1F1F1;
+    font-size: 20px;
+    margin-right: 16px;
+    padding: 4px 12px;
+    color: #3B3B3B;
+    font-weight: 400;
+}
+
+@media (max-width: 992px) {
+    .content{
+        padding: 80px 12px;
+    }
+    .item{
+        width: 100%;
+    }
+}
+
+/*換頁區*/
+.pageButton{
+    max-width: 152px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 16px;
+}
+
+.pageButton ul{
+    max-width: 152px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 16px;
+}
+
+.pagenum{
+    display: block;
+    background-color: #ffffff;
+    color: #3B3B3B;
+    font-size: 24px;
+    text-decoration: none;
+    padding: 2px 13px;
+    border-radius: 4px;
+}
+
+.pagenum:hover{
+    color: #ffffff;
+    background-color: #1E1E1E;
+}
+
+
+/* 表尾區域*/
+.footer{
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    align-items: center;
+
+}
+.footer-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.footer-contact p,.footer-logo span {
+    font-size: 20px;
+}
+.footer-contact p {
+    line-height: 30px;
+    }
+.footer-contact span{
+    line-height: 24px;
+}
+.footer-contact span a {
+    color: #9e9e9e;
+}
+.footer-social a {
+    width: 306px;
+    background: #ffffff;
+    padding: 8px 24px;
+    border-radius: 8px;
+    border: 1px solid #c1c1c1;
+    margin-bottom: 24px;
+    display:block;
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #3b3b3b;
+}
+.footer-social a:hover{
+    font-weight: 700;
+    background: #000;
+    color: #fff;
+}
+  
+.footer-social img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+  
+.footer-social a.footer-social-active {
+    background: #000;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+
+@media(max-width:767px){
+    .footer{
+      background-image:url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-sm.png?raw=true");
+    }
+    .footer-inner {
+        flex-direction: column;
+    }
+    .footer-contact {
+    text-align: center;
+    margin-bottom: 60px;
+    }
+}
